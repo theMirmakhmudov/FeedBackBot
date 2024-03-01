@@ -78,7 +78,7 @@ async def process_address(message: Message, state: FSMContext):
     await state.update_data(address1=message.location.latitude)
     await state.update_data(address2=message.location.longitude)
     await state.set_state(Form.izoh)
-    await message.answer("<b>Feedback yozing yoki izoh kiriting</b>")
+    await message.answer("<b>Feedback yozing yoki izoh kiriting</b>",reply_markup=ReplyKeyboardRemove())
 
 
 @router.message(Form.izoh)
